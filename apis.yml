@@ -1,23 +1,88 @@
 aid: iluka-resources
+
 name: Iluka Resources
-description: 'Iluka Resources is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.iluka.com/media/d4shwyn2/iluka-800px.png
+
+description: Iluka Resources Limited (ASX:ILU) is an Australian-listed global critical minerals company with expertise in exploration, mining,
+  processing, marketing and rehabilitation. It produces mineral sands products - zircon, rutile, synthetic rutile and ilmenite - with mining and
+  processing operations in South Australia, Western Australia and New South Wales, and is developing a fully integrated rare earths refinery at
+  Eneabba, Western Australia. Its public website covers operations, products, investor relations and sustainability; no public developer API was
+  observed during identity profiling.
+
 url: https://raw.githubusercontent.com/api-evangelist/iluka-resources/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Mining
+- Mineral Sands
+- Rare Earths
+- Critical Minerals
+- Australia
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/iluka-resources-hosts.yml
+- type: Vendors
+  url: vendors/iluka-resources-vendors.yml
+- type: DomainSecurity
+  url: security/iluka-resources-domain-security.yml
 - type: Website
-  url: https://iluka.com/
+  url: https://www.iluka.com/
+- type: Contact
+  url: https://www.iluka.com/contact-us/
+- type: PrivacyPolicy
+  url: https://www.iluka.com/documents/2019/privacy-policy/
+- type: Newsroom
+  url: https://www.iluka.com/investors-media/media/
+- type: Leadership
+  url: https://www.iluka.com/about-iluka/leadership/
+- type: Careers
+  url: https://www.iluka.com/careers/
+- type: InvestorRelations
+  url: https://www.iluka.com/investors-media/
+- type: LinkedIn
+  url: https://au.linkedin.com/company/iluka-resources
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website www.iluka.com self-identifies as "Iluka Resources" (title, ASX:ILU). No developer portal, API docs, pricing, terms or logo asset
+    found on the site; image left unset.
+  evidence:
+  - url: https://www.iluka.com/
+    status: 200
+  - url: https://www.iluka.com/contact-us/
+    status: 200
+  - url: https://www.iluka.com/documents/2019/privacy-policy/
+    status: 200
+  - url: https://au.linkedin.com/company/iluka-resources
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

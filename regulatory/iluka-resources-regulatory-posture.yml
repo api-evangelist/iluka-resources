@@ -1,0 +1,78 @@
+generated: '2026-10-21'
+method: searched
+probe: true
+source: https://www.iluka.com/documents/2019/privacy-policy/
+notes: >-
+  The only legal page linked from www.iluka.com is the Privacy Policy, which redirects to a PDF
+  (https://www.iluka.com/media/2aljkpau/privacy-policy.pdf, HTTP 200, application/pdf, 421839 bytes;
+  "This Privacy Policy was last updated in June 2019."). Quotes below are from the PDF's text, with
+  line-wrap whitespace collapsed. A plain curl of the HTML URL returned a 403 JavaScript/cookie challenge;
+  the redirect target PDF served 200 to a browser user-agent. No terms of service, trust, subprocessor,
+  AI, accessibility or transparency pages were found on the site.
+signals:
+  data_subject_request:
+    url: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+    section: 'ACCESS AND CORRECTION OF YOUR PERSONAL INFORMATION'
+    channel: privacy@iluka.com
+    rights_named: [access, correction, deletion of job-application data]
+    evidence:
+    - source: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "We will, on request, provide you with access to the information we hold about you. If you require
+        access to your personal information, please contact our Privacy Officer at privacy@iluka.com. Before
+        we provide you with access to your personal information we will require some proof of identity."
+    - source: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "If the personal information we hold about you is inaccurate, incomplete, irrelevant or out-of-date,
+        please contact us and we will take reasonable steps to either correct this information, or if
+        necessary, discuss alternative action with you."
+    note: >-
+      Access and correction rights with a named channel (Privacy Officer email) and identity verification;
+      access is usually free but a reasonable fee may be charged. No response SLA is stated. Deletion is
+      offered only for unsuccessful job applicants (see data_retention).
+  subprocessors:
+    url: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+    section: '6.2 Disclosure to a third party'
+    list_published: false
+    evidence:
+    - source: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "The organisations to which Iluka outsource services include share registry services, mailing
+        services, and information technology services;"
+    note: >-
+      Discloses CATEGORIES of service providers only; no named subprocessor list is published.
+  data_residency:
+    url: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+    section: '6.2 Disclosure to a third party'
+    evidence:
+    - source: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "This may include disclosure to contractors outside of your country. Our agreements with such
+        contractors require that they keep your personal information confidential, and that they only use or
+        disclose your personal information for the purposes of providing those goods or services to us;"
+    note: >-
+      No residency commitment: the policy states personal information may be disclosed to contractors
+      outside the individual's country, protected contractually by confidentiality and purpose limitation.
+      Countries are not named.
+  data_retention:
+    url: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+    section: '3.3 Collection of your information for the purposes of a job application'
+    evidence:
+    - source: https://www.iluka.com/media/2aljkpau/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "Where we collect personal information for the purposes of considering a job application, we may
+        choose to retain that information following the outcome of that application. You may request that
+        Iluka deletes your personal information following an unsuccessful application."
+    note: >-
+      The only retention statement in the policy, scoped to job applications; no retention periods are
+      stated for any category of data.

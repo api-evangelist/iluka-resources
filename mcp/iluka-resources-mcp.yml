@@ -1,0 +1,20 @@
+name: Iluka Resources MCP Server
+type: MCPServer
+generated: '2026-10-21'
+method: none
+status: none
+note: >-
+  Checked, nothing there. Iluka Resources (ASX:ILU) publishes no developer API, no OpenAPI contract and no MCP server.
+  https://www.iluka.com/.well-known/mcp.json returned 404, preflight contract discovery on iluka.com, www.iluka.com and
+  api.iluka.com found no MCP, OpenAPI, AsyncAPI or GraphQL surface, and a web search for an Iluka Resources MCP server or
+  developer API returned nothing about the company. With no OpenAPI operations, no candidate tool list can be derived.
+evidence:
+- url: https://www.iluka.com/.well-known/mcp.json
+  status: 404
+- url: https://www.iluka.com/llms.txt
+  status: 404
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

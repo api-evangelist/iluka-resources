@@ -1,0 +1,9 @@
+generated: '2026-10-21'
+method: none
+name: Iluka Resources packages
+note: Iluka Resources is a mineral sands / rare earths mining company with no public developer API. No first-party SDK or client library found. Checked registry.npmjs.org/iluka (404), pypi.org/pypi/iluka/json (404), api.github.com/orgs/iluka-resources (404), and a web search for Iluka Resources API/SDK/GitHub (no relevant results).
+checked:
+- https://registry.npmjs.org/iluka
+- https://pypi.org/pypi/iluka/json
+- https://api.github.com/orgs/iluka-resources
+packages: []
